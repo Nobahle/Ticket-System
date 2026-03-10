@@ -13,9 +13,9 @@ CREATE TABLE IF NOT EXISTS tickets (
 )
 """)
 
-# -----------------------------
+
 # Ticket Classification Function
-# -----------------------------
+
 def classify_ticket(ticket):
 
     ticket = ticket.lower()
@@ -39,9 +39,9 @@ def classify_ticket(ticket):
     return "Operations"
 
 
-# -----------------------------
+
 # Save Ticket Function
-# -----------------------------
+
 def save_ticket(ticket, category):
 
     cursor.execute(
@@ -52,9 +52,9 @@ def save_ticket(ticket, category):
     conn.commit()
 
 
-# -----------------------------
+
 # View All Tickets
-# -----------------------------
+
 def view_tickets():
 
     cursor.execute("SELECT * FROM tickets")
@@ -69,9 +69,9 @@ def view_tickets():
             print(f"ID: {t[0]} | Ticket: {t[1]} | Category: {t[2]}")
 
 
-# -----------------------------
+
 # Main Menu
-# -----------------------------
+
 while True:
 
     print("\n===== Smart Ticket System =====")
